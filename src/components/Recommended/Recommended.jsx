@@ -19,7 +19,7 @@ const Recommended = ({ darkMode, setDarkMode }) => {
   useEffect(() => {
     const fetchRecommendedMovies = async () => {
       setLoading(true);
-      let url = `http://www.omdbapi.com/?apikey=984f4713&s=${searchQuery || "drama"}&page=${page}`;
+      let url = `https://www.omdbapi.com/?apikey=984f4713&s=${searchQuery || "drama"}&page=${page}`;
 
       try {
         const response = await fetch(url);
