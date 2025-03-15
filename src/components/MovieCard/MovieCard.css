@@ -1,0 +1,36 @@
+.movie-item {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+  .movie-image {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .movie-item:hover .movie-image {
+    transform: scale(1.1);
+  }
+  
+  .movie-hover {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white !important;
+    text-align: center;
+    padding: 10px;
+    transition: bottom 0.3s ease-in-out;
+    
+  }
+  
+  .movie-item:hover .movie-hover {
+    bottom: 0;
+  }
+
+
+  .movie-hover h3,
+.movie-hover p {
+  color: white !important; /* Fuerza el color blanco */
+}
