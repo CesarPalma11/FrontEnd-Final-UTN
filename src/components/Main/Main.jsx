@@ -17,7 +17,7 @@ const Main = ({ darkMode, setDarkMode }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      let url = `http://www.omdbapi.com/?apikey=984f4713&s=${searchQuery || "action"}&page=${page}`;
+      let url = `https://www.omdbapi.com/?apikey=984f4713&s=${searchQuery || "action"}&page=${page}`;
 
       try {
         const response = await fetch(url);
