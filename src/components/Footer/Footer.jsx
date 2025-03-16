@@ -22,7 +22,6 @@ const Footer = ({darkMode}) => {
           <p>© 2025 Todos los derechos reservados</p>
         </ul>
 
-        {/* Otras columnas */}
         <ul className="footer-column">
           <li>Centro de ayuda</li>
           <li>Empleo</li>
@@ -44,7 +43,6 @@ const Footer = ({darkMode}) => {
     </footer>
   );
 };
-
 
 Footer.propTypes = {
   darkMode: PropTypes.bool.isRequired, 

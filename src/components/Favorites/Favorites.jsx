@@ -37,7 +37,6 @@ const Favorites = ({darkMode, setDarkMode}) => {
         console.error("Error fetching movies:", error);
       }
     };
-
     fetchMovies();
   }, [searchQuery, favoriteMovies]); 
 
@@ -73,7 +72,7 @@ const Favorites = ({darkMode, setDarkMode}) => {
               />
             ))
           ) : (
-            <p>Aun no tienes peliculas favoritas...</p>
+            <p className="text-fav">Aun no tienes peliculas favoritas...</p>
           )}
         </div>
       </div>

@@ -4,7 +4,6 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-
 const Navbar = ({ darkMode, setDarkMode, onSearch, }) => {
   const [isSearchVisible, setSearchVisible] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
@@ -17,8 +16,6 @@ const Navbar = ({ darkMode, setDarkMode, onSearch, }) => {
       return newMode;
     });
   };
-  
-
   
   const handleIconClick = () => setSearchVisible(!isSearchVisible);
   const handleSearchChange = (e) => {
@@ -34,12 +31,11 @@ const Navbar = ({ darkMode, setDarkMode, onSearch, }) => {
       </div>
 
       <nav className={`navbar ${isMenuOpen ? "active" : ""}`}>
-        <Link to="/">LOGO</Link>
+        <Link to="/" className="logo">LOGO</Link>
         <Link to="/" onClick={toggleMenu}>Inicio</Link>
         <Link to="/recommended" onClick={toggleMenu}>Recomendados</Link>
         <Link to="/favorites" onClick={toggleMenu}>Favoritos</Link>
       </nav>
-
       
       <div className="search-theme-container">
         <div className="search-box">
@@ -62,11 +58,9 @@ const Navbar = ({ darkMode, setDarkMode, onSearch, }) => {
     </header>
   );
 };
-
 Navbar.propTypes = {
   onSearch: PropTypes.func.isRequired, 
   darkMode: PropTypes.bool.isRequired, 
   setDarkMode: PropTypes.func.isRequired, 
 };
-
 export default Navbar;
