@@ -24,7 +24,7 @@ const Favorites = ({darkMode, setDarkMode}) => {
       }
       try {
         const response = await fetch(
-          `http://www.omdbapi.com/?apikey=984f4713&s=${searchQuery}`
+          `https://www.omdbapi.com/?apikey=984f4713&s=${searchQuery}`
         );
         const result = await response.json();
 
